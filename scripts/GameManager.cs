@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -20,8 +21,14 @@ public class GameManager : MonoBehaviour
 
 
     }
-
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+   
+    
     // Update is called once per frame
+    
     void Update()
     {
         Text.text = (counter / 2).ToString();
@@ -42,7 +49,9 @@ public class GameManager : MonoBehaviour
             timeUI.text = "0.00";
        
             Text.text = "You lose!";
+            GameOver();
         }
+ 
 
 
         
