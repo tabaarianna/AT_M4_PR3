@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        time = 20f;
+        time = 30f;
 
 
     }
